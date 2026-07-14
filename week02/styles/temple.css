@@ -1,0 +1,39 @@
+/* week02/styles/temple.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra el texto y las imágenes */
+}
+
+header {
+    background-color: steelblue; /* Un azul típico para encabezados */
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid steelblue; /* Agrega un borde alrededor de la imagen del templo */
+    display: block;
+    margin: 20px auto; /* Centra la imagen y le da espacio arriba y abajo */
+}
+
+footer {
+    background-color: #333; /* Gris oscuro */
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
