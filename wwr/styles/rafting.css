@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-/* --- Estructura Principal --- */
+/* --- Estructura Principal (Limitada a 840px) --- */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
@@ -55,10 +55,10 @@ header img {
   display: block;
 }
 
-/* Menú de Navegación dentro del Header (Exigido por Page Audit) */
+/* Menú de Navegación requerido por la auditoría */
 header nav {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -129,6 +129,7 @@ footer p {
   color: #ffffff;
   margin: 0;
   padding: 0;
+  font-size: 13px;
 }
 
 .socialmedia {
