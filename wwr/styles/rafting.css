@@ -8,17 +8,18 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* --- Universal Selector (Box-Model Reset) --- */
+/* --- Reseteo Universal --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* --- Body & Layout --- */
+/* --- Estructura Principal (Limitada a 840px como exige la guía) --- */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
+  background-color: #f8f9fa;
 }
 
 header, main, footer {
@@ -26,7 +27,7 @@ header, main, footer {
   margin: 0 auto;
 }
 
-/* --- Typography & Spacing --- */
+/* --- Tipografía y Espaciado Base --- */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
@@ -37,61 +38,119 @@ nav, p, section, article {
   padding: 8px;
 }
 
+/* --- Header & Logo Control --- */
 header {
   background-color: var(--primary-color);
   color: var(--accent2-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* CONTROL DEL LOGO: Evita que se agrande */
+header img {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+/* Menú de Navegación */
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #ffffff;
+}
+
+/* --- Hero Section & Capas Sobrepuestas --- */
+.hero {
+  position: relative;
+}
+
+/* Imagen grande de fondo del Hero */
+.hero > img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+/* Título H1 sobrepuesto */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  opacity: 0.85;
+  background-color: var(--accent1-color);
+  color: #ffffff;
+}
+
+/* Tarjeta / Artículo flotante sobre el Hero */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 6px;
+  margin: 0;
+}
+
+.hero article img {
+  float: right;
+  width: 120px;
+  height: auto;
+  margin-left: 15px;
+  border-radius: 4px;
+}
+
+/* --- Footer & Control Estricto de Iconos Sociales --- */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.socialmedia {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .socialmedia a {
   text-decoration: none;
 }
 
-/* --- Hero Section & Overlays --- */
-.hero {
-  position: relative;
-}
-
-.hero > img {
+/* CONTROL ESTRICTO DE ICONOS SOCIALES: Ancho fijo de 30px */
+.socialmedia img,
+footer nav img {
+  width: 30px !important;
+  height: 30px !important;
   display: block;
-  width: 100%;
-  height: auto;
-}
-
-h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff;
-}
-
-.hero article {
-  position: absolute;
-  bottom: 30px;
-  width: 70%;
-  left: 15%;
-  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background for readability */
-}
-
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 15px;
-  border-radius: 8px;
-}
-
-/* --- Arreglar tamaño de los iconos sociales --- */
-.socialmedia img {
-  width: 40px;
-  height: auto;
-}
-
-/* --- Alinear el footer en una sola línea (opcional pero se ve mejor) --- */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
