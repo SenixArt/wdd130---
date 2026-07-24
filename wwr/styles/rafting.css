@@ -82,3 +82,16 @@ h1 {
   margin-left: 15px;
   border-radius: 8px;
 }
+
+/* --- Arreglar tamaño de los iconos sociales --- */
+.socialmedia img {
+  width: 40px;
+  height: auto;
+}
+
+/* --- Alinear el footer en una sola línea (opcional pero se ve mejor) --- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
